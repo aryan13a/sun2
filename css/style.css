@@ -15,13 +15,13 @@
     --accent-color: #1b3b0c;    /* Stripe 8: Deep forest green for active elements/lines */
     
     /* Dedicated Dark Theme Variables for Header/Footer/Services */
-    --dark-bg: #1b3b0c;         /* Stripe 8: Deep forest green */
-    --dark-bg-darker: #132a08;  /* Extra deep forest green for contrast footers */
+    --dark-bg: #4e5b31;         /* Dark olive green from previous palette */
+    --dark-bg-darker: #3e4927;  /* Slightly darker olive green for footer contrast */
     --dark-text: #ffffff;       /* White text */
     --dark-text-light: #d9e4b2; /* Stripe 1: Light sage green */
     
-    --overlay-color: rgba(27, 59, 12, 0.95);
-    --card-hover-overlay: rgba(27, 59, 12, 0.75);
+    --overlay-color: rgba(78, 91, 49, 0.95);
+    --card-hover-overlay: rgba(78, 91, 49, 0.75);
 
     /* Typography */
     --font-heading: 'Lora', Georgia, serif;
