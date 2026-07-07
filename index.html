@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUN SOUL STYLE | Boutique Interior Design Studio</title>
+    <!-- Google Fonts: Lora (Serif) and Inter (Sans-Serif) with Bold weights -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,700;1,700&family=Inter:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header id="site-header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="#home">SUN SOUL STYLE</a>
+            </div>
+            <nav class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">Studio</a>
+                <a href="#projects">Portfolio</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="search-btn" id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button class="menu-toggle" id="menu-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+        <nav class="mobile-nav-links">
+            <a href="#home" class="mobile-link">Home</a>
+            <a href="#about" class="mobile-link">Studio</a>
+            <a href="#projects" class="mobile-link">Portfolio</a>
+            <a href="#services" class="mobile-link">Services</a>
+            <a href="#contact" class="mobile-link">Contact</a>
+        </nav>
+        <div class="mobile-socials">
+            <a href="https://www.instagram.com/sun_soul_style/" target="_blank">Instagram</a>
+            <a href="#contact">Inquiries</a>
+        </div>
+    </div>
+
+    <!-- Search Overlay -->
+    <div class="search-overlay" id="search-overlay">
+        <button class="search-close" id="search-close"><i class="fa-solid fa-xmark"></i></button>
+        <div class="search-box">
+            <input type="text" placeholder="Search projects, materials, rooms..." id="search-input">
+            <span class="search-line"></span>
+        </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <main>
+        
+        <!-- Hero Slider Section -->
+        <section id="home" class="hero-section">
+            <div class="slider-container">
+                
+                <!-- Slide 1 -->
+                <div class="slide active" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('assets/hero1.webp');">
+                    <div class="slide-content">
+                        <span class="slide-category">Selected Work</span>
+                        <h1 class="slide-title">The Ojai Hacienda</h1>
+                        <p class="slide-desc">A warm, light-filled sanctuary emphasizing organic shapes, custom walnut joinery, and soft plaster walls. Merging Mediterranean architecture with tactile simplicity.</p>
+                        <a href="#projects" class="slide-btn">View Portfolio</a>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('assets/hero2.webp');">
+                    <div class="slide-content">
+                        <span class="slide-category">Featured Space</span>
+                        <h1 class="slide-title">The Walnut Kitchen</h1>
+                        <p class="slide-desc">An elegant culinary workspace designed with solid walnut cabinets, honed Arabescato marble, and minimalist details. Craftsmanship is integrated into the sensory experience.</p>
+                        <a href="#projects" class="slide-btn">Explore Kitchen</a>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('assets/hero3.webp');">
+                    <div class="slide-content">
+                        <span class="slide-category">Intimate Retreats</span>
+                        <h1 class="slide-title">Terracotta Bedroom</h1>
+                        <p class="slide-desc">A cozy, grounding bedroom utilizing earthy terracotta accents, raw linen drapery, and rich rattan textures. A peaceful space where form and material meet.</p>
+                        <a href="#projects" class="slide-btn">View Details</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Slider Controls -->
+            <div class="slider-controls">
+                <button class="control-btn prev-btn" id="prev-btn"><i class="fa-solid fa-chevron-left"></i></button>
+                <div class="slide-indicators" id="slide-indicators">
+                    <span class="indicator active" data-index="0">01</span>
+                    <span class="indicator" data-index="1">02</span>
+                    <span class="indicator" data-index="2">03</span>
+                </div>
+                <button class="control-btn next-btn" id="next-btn"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+        </section>
+
+        <!-- Philosophy Section -->
+        <section id="about" class="philosophy-section">
+            <div class="section-container">
+                <span class="section-subtitle">Philosophy</span>
+                <blockquote class="philosophy-quote">
+                    "We believe a home should feel like an extension of the soul. Our design language merges tactile simplicity with confident refinement — balancing cream boucle textures, raw walnut wood, and warm Mediterranean tones."
+                </blockquote>
+                <div class="studio-bio">
+                    <div class="bio-text">
+                        <p>Inspired by Mediterranean architecture, natural textiles, and the quiet luxury of clean lines, boutique studio Sun Soul Style creates spaces that feel both elevated and deeply lived-in. Led by designer Keshavi Gupta and based in Jaipur, Rajasthan, we specialize in high-end residential interiors that honor natural light, organic materials, and hand-crafted details.</p>
+                    </div>
+                    <div class="bio-image-wrapper">
+                        <img src="assets/kp.png" alt="Keshavi Gupta" class="bio-image">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Grid Section -->
+        <section id="projects" class="projects-section">
+            <div class="section-container">
+                <div class="projects-header">
+                    <div class="title-wrap">
+                        <span class="section-subtitle">Selected Projects</span>
+                        <h2 class="section-title">Portfolio</h2>
+                    </div>
+                    <!-- Filter Controls -->
+                    <div class="filter-controls">
+                        <button class="filter-btn active" data-filter="all">All Works</button>
+                        <button class="filter-btn" data-filter="living">Living Rooms</button>
+                        <button class="filter-btn" data-filter="kitchen">Kitchens</button>
+                        <button class="filter-btn" data-filter="bedroom">Bedrooms</button>
+                        <button class="filter-btn" data-filter="dining">Dining Rooms</button>
+                    </div>
+                </div>
+
+                <!-- Perfectly Aligned 3-Column Projects Grid -->
+                <div class="projects-grid">
+                    
+                    <!-- Item 1 (Living Room) -->
+                    <div class="project-card" data-category="living">
+                        <div class="card-image-wrapper">
+                            <a href="#contact" class="card-link">
+                                <div class="card-hover-overlay">
+                                    <span class="view-text">VIEW</span>
+                                </div>
+                                <img src="assets/project-living.jpg" alt="The Ojai Hacienda" class="project-image">
+                            </a>
+                        </div>
+                        <h3 class="project-card-title">The Ojai Hacienda</h3>
+                        <p class="project-card-excerpt">A warm, light-filled sanctuary emphasizing organic shapes, custom walnut joinery, and soft plaster walls.</p>
+                        <div class="project-card-meta">
+                            <span class="meta-category">Living Room</span>
+                            <span class="meta-divider">|</span>
+                            <span class="meta-style">Mediterranean</span>
+                            <span class="meta-divider">|</span>
+                            <span class="meta-year">2026</span>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 (Kitchen) -->
+                    <div class="project-card" data-category="kitchen">
+                        <div class="card-image-wrapper">
+                            <a href="#contact" class="card-link">
+                                <div class="card-hover-overlay">
+                                    <span class="view-text">VIEW</span>
+                                </div>
+                                <img src="assets/project-kitchen.jpg" alt="The Walnut Kitchen" class="project-image">
+                            </a>
+                        </div>
+                        <h3 class="project-card-title">The Walnut Kitchen</h3>
+                        <p class="project-card-excerpt">An elegant culinary workspace designed with solid walnut cabinets, honed Arabescato marble, and minimalist details.</p>
+                        <div class="project-card-meta">
+                            <span class="meta-category">Kitchen</span>
+                            <span class="meta-divider">|</span>
+                            <span class="meta-style">Minimalist</span>
+                            <span class="meta-divider">|</span>
+                            <span class="meta-year">2026</span>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 (Bedroom) -->
+                    <div class="project-card" data-category="bedroom">
+                        <div class="card-image-wrapper">
+                            <a href="#contact" class="card-link">
+                                <div class="card-hover-overlay">
+                                    <span class="view-text">VIEW</span>
+                                </div>
+                                <img src="assets/project-bedroom.jpg" alt="Terracotta Bedroom Sanctuary" class="project-image">
+                            </a>
+                        </div>
+                        <h3 class="project-card-title">Terracotta Bedroom</h3>
+                        <p class="project-card-excerpt">A cozy, grounding bedroom utilizing earthy terracotta accents, raw linen drapery, and rich rattan textures.</p>
+                        <div class="project-card-meta">
+                            <span class="meta-category">Bedroom</span>
+                            <span class="meta-divider">|</span>
+                            <span class="meta-style">Rustic Modern</span>
+                            <span class="meta-divider">|</span>
+                            <span class="meta-year">2026</span>
+                        </div>
+                    </div>
+
+                    <!-- Item 4 (Dining Room) -->
+                    <div class="project-card" data-category="dining">
+                        <div class="card-image-wrapper">
+                            <a href="#contact" class="card-link">
+                                <div class="card-hover-overlay">
+                                    <span class="view-text">VIEW</span>
+                                </div>
+                                <img src="assets/project-dining.jpg" alt="The Organic Dining Room" class="project-image">
+                            </a>
+                        </div>
+                        <h3 class="project-card-title">Organic Dining Room</h3>
+                        <p class="project-card-excerpt">A bright, airy dining space centered around an organic curved oak table and natural woven lighting.</p>
+                        <div class="project-card-meta">
+                            <span class="meta-category">Dining Room</span>
+                            <span class="meta-divider">|</span>
+                            <span class="meta-style">Coastal Modern</span>
+                            <span class="meta-divider">|</span>
+                            <span class="meta-year">2026</span>
+                        </div>
+                    </div>
+
+                    <!-- Item 5 (Living Room 2) -->
+                    <div class="project-card" data-category="living">
+                        <div class="card-image-wrapper">
+                            <a href="#contact" class="card-link">
+                                <div class="card-hover-overlay">
+                                    <span class="view-text">VIEW</span>
+                                </div>
+                                <img src="assets/hero-interior.jpg" alt="Mediterranean Lounge" class="project-image">
+                            </a>
+                        </div>
+                        <h3 class="project-card-title">Mediterranean Lounge</h3>
+                        <p class="project-card-excerpt">Soft-toned lounge spaces configured with neutral fabrics, raw travertine blocks, and statement ceramics.</p>
+                        <div class="project-card-meta">
+                            <span class="meta-category">Living Room</span>
+                            <span class="meta-divider">|</span>
+                            <span class="meta-style">Quiet Luxury</span>
+                            <span class="meta-divider">|</span>
+                            <span class="meta-year">2025</span>
+                        </div>
+                    </div>
+
+                    <!-- Item 6 (Studio Space / Office) -->
+                    <div class="project-card" data-category="living">
+                        <div class="card-image-wrapper">
+                            <a href="#contact" class="card-link">
+                                <div class="card-hover-overlay">
+                                    <span class="view-text">VIEW</span>
+                                </div>
+                                <img src="assets/about_designer.jpg" alt="Coastal Shoreline Studio" class="project-image">
+                            </a>
+                        </div>
+                        <h3 class="project-card-title">Shoreline Studio</h3>
+                        <p class="project-card-excerpt">A peaceful coastal refuge featuring raw plaster walls, light oak finishes, and integrated custom storage solutions.</p>
+                        <div class="project-card-meta">
+                            <span class="meta-category">Studio Space</span>
+                            <span class="meta-divider">|</span>
+                            <span class="meta-style">Soft Minimalism</span>
+                            <span class="meta-divider">|</span>
+                            <span class="meta-year">2026</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Services & Packages Section -->
+        <section id="services" class="services-section">
+            <div class="section-container">
+                <span class="section-subtitle">What We Offer</span>
+                <h2 class="section-title">Design Services</h2>
+                
+                <div class="services-grid">
+                    
+                    <!-- Package 1 -->
+                    <div class="service-card">
+                        <h3 class="service-name">Full-Service Design</h3>
+                        <span class="service-price">Starting at ₹5,00,000</span>
+                        <p class="service-desc">From initial concept planning to construction documents and final styling, we handle every detail of your renovation or new build.</p>
+                        <ul class="service-deliverables">
+                            <li>Space planning and furniture layouts</li>
+                            <li>Material, fixture, and finishes selection</li>
+                            <li>3D photo-realistic renderings</li>
+                            <li>Procurement, logistics, and installation</li>
+                        </ul>
+                    </div>
+
+                    <!-- Package 2 -->
+                    <div class="service-card">
+                        <h3 class="service-name">E-Design & Curation</h3>
+                        <span class="service-price">Flat Fee ₹1,50,000 / room</span>
+                        <p class="service-desc">A flexible, virtual design service providing you with a custom blueprint to execute at your own pace.</p>
+                        <ul class="service-deliverables">
+                            <li>Digital concept board and color palette</li>
+                            <li>To-scale room layout plan</li>
+                            <li>Curated shopping list with direct purchase links</li>
+                            <li>Step-by-step setup and styling guide</li>
+                        </ul>
+                    </div>
+
+                    <!-- Package 3 -->
+                    <div class="service-card">
+                        <h3 class="service-name">Design Consultation</h3>
+                        <span class="service-price">₹25,000 / hour</span>
+                        <p class="service-desc">A focused, one-on-one session to solve specific design challenges, select paint colors, or refine layouts.</p>
+                        <ul class="service-deliverables">
+                            <li>Up to 2 hours in-person or virtual consultation</li>
+                            <li>Color palette and general styling advice</li>
+                            <li>Follow-up recap with resource notes</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Carousel Section -->
+        <section class="testimonials-section">
+            <div class="section-container">
+                <span class="section-subtitle">Client Experiences</span>
+                <h2 class="section-title">Testimonials</h2>
+                
+                <div class="testimonials-container">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-slide active">
+                        <p class="testimonial-quote">"Working with Keshavi was an absolute dream. She understood our vision before we even knew how to articulate it. Every single room feels incredibly warm, tactile, and peaceful."</p>
+                        <span class="testimonial-author">Sarah & Marcus K.</span>
+                        <span class="testimonial-project">The Ojai Hacienda</span>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-slide">
+                        <p class="testimonial-quote">"The attention to detail in our kitchen is unbelievable. Keshavi managed to make a highly functional space feel like an artistic masterpiece. We spend all our time here now."</p>
+                        <span class="testimonial-author">Claire L.</span>
+                        <span class="testimonial-project">The Walnut Kitchen</span>
+                    </div>
+                </div>
+
+                <div class="testimonials-nav">
+                    <button class="test-prev"><i class="fa-solid fa-arrow-left"></i></button>
+                    <button class="test-next"><i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="section-container">
+                <div class="contact-split">
+                    <div class="contact-info">
+                        <span class="section-subtitle">Start Your Journey</span>
+                        <h2 class="section-title">Work With Us</h2>
+                        <p class="contact-intro">We typically respond to new inquiries within 2-3 business days. We look forward to shaping your space into a peaceful extension of your soul.</p>
+                        
+                        <div class="info-blocks">
+                            <div class="info-block">
+                                <h3>Location</h3>
+                                <p>Jaipur, Rajasthan, India</p>
+                            </div>
+                            <div class="info-block">
+                                <h3>Email</h3>
+                                <p>hello@sunsoulstyle.com</p>
+                            </div>
+                            <div class="info-block">
+                                <h3>Instagram</h3>
+                                <p>@sun_soul_style</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-wrap">
+                        <form id="inquiry-form" class="inquiry-form" onsubmit="event.preventDefault(); alert('Thank you for your inquiry! Keshavi will contact you shortly.');">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">Name</label>
+                                    <input type="text" id="name" required placeholder="Your full name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" required placeholder="Your email address">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="project-type">Project Type</label>
+                                    <select id="project-type">
+                                        <option value="full-home">Full-Home Design</option>
+                                        <option value="room-renovation">Room Renovation</option>
+                                        <option value="consultation">Design Consultation</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="budget">Estimated Budget</label>
+                                    <select id="budget">
+                                        <option value="under-1.5l">Under ₹1,50,000</option>
+                                        <option value="1.5l-5l">₹1,50,000 - ₹5,00,000</option>
+                                        <option value="5l-10l">₹5,00,000 - ₹10,00,000</option>
+                                        <option value="over-10l">Over ₹10,00,000</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Project Description</label>
+                                <textarea id="message" rows="5" required placeholder="Tell us about your space, timeline, and design goals..."></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn">Send Inquiry</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Area -->
+    <footer id="site-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <span class="footer-logo">SUN SOUL STYLE</span>
+                <p class="footer-tagline">Warm, elevated spaces shaped by natural light and organic textures.</p>
+            </div>
+            <div class="footer-links-wrap">
+                <div class="footer-column">
+                    <h3>Explore</h3>
+                    <a href="#home">Home</a>
+                    <a href="#about">Studio</a>
+                    <a href="#projects">Portfolio</a>
+                    <a href="#services">Services</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <span>+91 70733 19692</span>
+                    <span>hello@sunsoulstyle.com</span>
+                    <span>Jaipur, Rajasthan</span>
+                </div>
+                <div class="footer-column">
+                    <h3>Follow</h3>
+                    <a href="https://www.instagram.com/sun_soul_style/" target="_blank">Instagram</a>
+                    <a href="https://pinterest.com" target="_blank">Pinterest</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 SUN SOUL STYLE. All rights reserved. Built with soft minimalism.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>
