@@ -8,13 +8,13 @@
 ------------------------------------------------------------- */
 :root {
     /* Color System */
-    --bg-color: #f5f1e5;        /* Warm sand/beige background */
-    --bg-darker: #ebe6d9;       /* Slightly darker sand/beige */
-    --text-color: #383839;      /* Charcoal gray for body text */
-    --text-light: #6e6e70;      /* Medium gray for subtler elements */
-    --accent-color: #000000;    /* Pitch black for active states/lines */
-    --overlay-color: rgba(245, 241, 229, 0.85); /* Semi-transparent background for overlays */
-    --card-hover-overlay: rgba(255, 255, 255, 0.4); /* Glass overlay for projects */
+    --bg-color: #4e5b31;        /* Dark olive green background from 23857.png */
+    --bg-darker: #3e4927;       /* Slightly darker olive green for contrast blocks */
+    --text-color: #ffffff;      /* White color for texts */
+    --text-light: #d3d88a;      /* Light sage green from 23857.png for muted/secondary text */
+    --accent-color: #ffffff;    /* White for active borders/states */
+    --overlay-color: rgba(78, 91, 49, 0.95); /* Dark olive overlay for navigation/search */
+    --card-hover-overlay: rgba(78, 91, 49, 0.75); /* Sage green overlay for project cards */
 
     /* Typography */
     --font-heading: 'Lora', Georgia, serif;
@@ -437,7 +437,7 @@ img {
 
 .slide-btn:hover {
     background-color: #ffffff;
-    color: var(--accent-color);
+    color: var(--bg-color);
     border-color: #ffffff;
 }
 
@@ -920,7 +920,7 @@ img {
 
 .form-group input, .form-group select, .form-group textarea {
     background-color: transparent;
-    border: 1px solid var(--bg-darker);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     padding: 15px;
     font-family: var(--font-body);
     font-weight: 700; /* Bold form inputs */
@@ -928,6 +928,11 @@ img {
     color: var(--accent-color);
     outline: none;
     transition: var(--transition-fast);
+}
+
+.form-group select option {
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
 
 .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
@@ -948,8 +953,8 @@ img {
 }
 
 .submit-btn:hover {
-    background-color: var(--text-color);
-    color: #ffffff;
+    background-color: var(--text-light);
+    color: var(--bg-color);
 }
 
 /* -------------------------------------------------------------
