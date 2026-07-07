@@ -148,7 +148,7 @@ img {
 
 .logo a {
     font-family: var(--font-body);
-    font-weight: 800; /* Extra bold */
+    font-weight: 400; /* Regular / Unbolded */
     font-size: 18px;
     letter-spacing: 0.25em;
     color: var(--dark-text); /* Always white */
@@ -987,7 +987,7 @@ img {
 
 .footer-logo {
     font-family: var(--font-body);
-    font-weight: 800;
+    font-weight: 400; /* Regular / Unbolded */
     font-size: 20px;
     letter-spacing: 0.25em;
     color: var(--dark-text);
