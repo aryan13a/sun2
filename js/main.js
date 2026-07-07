@@ -11,7 +11,9 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
   initStickyHeader();
   initScrollReveal();
+  initFormSubmissions();
 });
+
 
 /**
  * 1. Adaptive Video Loader & Playback Verification
@@ -238,4 +240,93 @@ function debounce(func, wait) {
     clearTimeout(timeout);
     timeout = setTimeout(later, wait);
   };
+}
+
+/**
+ * 6. Contact & Newsletter AJAX Form Handlers (Web3Forms API Integration)
+ */
+function initFormSubmissions() {
+  const inquiryForm = document.getElementById('inquiry-form');
+  const newsletterForm = document.getElementById('newsletter-form');
+
+  if (inquiryForm) {
+    const statusMsg = document.getElementById('form-status-message');
+    const submitBtn = inquiryForm.querySelector('button[type="submit"]');
+
+    inquiryForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      const formData = new FormData(inquiryForm);
+      const accessKey = formData.get('access_key');
+
+      // Check if access key is still a placeholder
+      if (accessKey === 'YOUR_ACCESS_KEY_HERE') {
+        statusMsg.innerHTML = '<p class="status-success" style="color: var(--color-sage); font-size: 0.9rem; margin-top: 1rem; text-align: center;"><strong>Demo Mode:</strong> Thank you! Your inquiry was successfully simulated. To enable real email delivery, replace the <code>access_key</code> value in <code>index.html</code> with your web3forms.com access token.</p>';
+        inquiryForm.reset();
+        return;
+      }
+
+      // Real Submission
+      statusMsg.innerHTML = '<p style="color: var(--color-charcoal-muted); font-size: 0.9rem; margin-top: 1rem; text-align: center;">Sending inquiry...</p>';
+      submitBtn.disabled = true;
+
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.success) {
+          statusMsg.innerHTML = '<p class="status-success" style="color: var(--color-sage); font-size: 0.9rem; margin-top: 1rem; text-align: center;">Thank you! Your inquiry has been sent successfully. We will get back to you shortly.</p>';
+          inquiryForm.reset();
+        } else {
+          statusMsg.innerHTML = `<p class="status-error" style="color: var(--color-terracotta); font-size: 0.9rem; margin-top: 1rem; text-align: center;">Error: ${data.message}</p>`;
+        }
+      })
+      .catch(error => {
+        console.error('Form submission error:', error);
+        statusMsg.innerHTML = '<p class="status-error" style="color: var(--color-terracotta); font-size: 0.9rem; margin-top: 1rem; text-align: center;">Something went wrong. Please check your connection and try again.</p>';
+      })
+      .finally(() => {
+        submitBtn.disabled = false;
+      });
+    });
+  }
+
+  if (newsletterForm) {
+    const statusMsg = document.getElementById('newsletter-status-message');
+
+    newsletterForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      const formData = new FormData(newsletterForm);
+      const accessKey = formData.get('access_key');
+
+      if (accessKey === 'YOUR_ACCESS_KEY_HERE') {
+        statusMsg.innerHTML = '<span style="color: var(--color-ochre);">Demo Mode: Subscribed successfully! (Replace access_key to activate)</span>';
+        newsletterForm.reset();
+        return;
+      }
+
+      statusMsg.innerHTML = '<span style="color: var(--color-cream); opacity: 0.6;">Subscribing...</span>';
+
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.success) {
+          statusMsg.innerHTML = '<span style="color: var(--color-sage-light);">Thank you for subscribing!</span>';
+          newsletterForm.reset();
+        } else {
+          statusMsg.innerHTML = `<span style="color: var(--color-terracotta);">Error: ${data.message}</span>`;
+        }
+      })
+      .catch(error => {
+        console.error('Newsletter error:', error);
+        statusMsg.innerHTML = '<span style="color: var(--color-terracotta);">Subscription failed. Try again later.</span>';
+      });
+    });
+  }
 }
